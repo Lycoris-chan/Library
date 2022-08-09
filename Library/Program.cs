@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IReader<Book>>(reader => new Library.Services.JsonBookReader(builder.Configuration["LibraryJSOMPath"]));
+builder.Services.AddScoped<IReader<Book>>(reader => new Library.Services.JsonBookReader(builder.Configuration["LibraryJSONPath"]));
 
 var app = builder.Build();
 
